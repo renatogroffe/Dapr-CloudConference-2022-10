@@ -1,0 +1,12 @@
+# Documentação: https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-azure-servicebus/
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: servicebus-pubsub
+spec:
+  type: pubsub.azure.servicebus
+  version: v1
+  metadata:
+  # A Connection String deve possuir a permissão Manage
+  - name: connectionString
+    value: "<CONNECTION STRING DO AZURE SERVICE BUS COM O ENTITY PATH APONTANDO PARA UM TÓPICO>"

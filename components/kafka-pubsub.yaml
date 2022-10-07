@@ -1,0 +1,13 @@
+# Documentação: https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-apache-kafka/
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: contagem-pubsub
+spec:
+  type: pubsub.kafka
+  version: v1
+  metadata:
+  - name: brokers
+    value: "localhost:9092"
+  - name: authType
+    value: "none"
